@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'Android';
+    src: url('./fontes/idroid.otf') format('opentype');
+    font-weight: normal;
+}
+
+/*Cores selecionadas na forma de variáveis*/
+:root {
+    --cor1: #c5ebd6;
+    --cor2: #83e1ad;
+    --cor3: #3ddc84;
+    --cor4: #2fa866;
+    --cor5: #1a5c37;
+    --cor6: #063d1e;
+
+    --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
+    --fonte-destaque: 'Bebas Neue', cursive;
+    --font-android: 'Android', cursive;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    background-color: #c5ebd6;
+}
+
+
+/* 
+CORES A SEREM USADAS
+#355C47
+#1A5C37
+#3DDC84
+#2FA866
+#83E1AD*/
