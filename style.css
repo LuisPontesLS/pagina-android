@@ -23,7 +23,52 @@
 * {
     margin: 0px;
     padding: 0px;
-    background-color: #c5ebd6;
+}
+
+body {
+    background-color: var(--cor1);
+    font-family: var(--fonte-padrao);
+}
+
+/*=== HEADER ==========================================*/
+header {
+    background-color: var(--cor5);
+}
+
+/*A linha abaixo significa: todo h1 dentro de header*/
+header>h1 {
+    color: white;
+    font-family: var(--fonte-destaque);
+}
+
+header>p {
+    color: white;
+}
+
+/*=== NAV ==========================================*/
+nav {
+    background-color: var(--cor5);
+}
+
+/*=== MAIN ==========================================*/
+main {
+    background-color: white;
+}
+
+/*Todos os h1 do main (desnecessário, só tem 1)*/
+main h1 {
+    color: var(--cor5);
+    font-family: var(--font-android);
+}
+
+/*Todos os h2 do main*/
+main h2 {
+    font-family: var(--font-android);
 }
 
 
+/*=== FOOTER ==========================================*/
+footer {
+    background-color: var(--cor6);
+    color: white;
+}
