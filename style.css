@@ -30,29 +30,69 @@ body {
     font-family: var(--fonte-padrao);
 }
 
-/*=== HEADER ==========================================*/
+/*=== HEADER ==================
+===============================*/
+
+/*Layout geral do header*/
 header {
-    background-color: var(--cor5);
+    background-image: linear-gradient(to bottom, var(--cor4), var(--cor6));
+    min-height: 150px;
+    text-align: center;
+    padding-top: 30px;
 }
 
-/*A linha abaixo significa: todo h1 dentro de header*/
+/*Todos h1 dentro de header*/
 header>h1 {
     color: white;
     font-family: var(--fonte-destaque);
+    margin-bottom: 20px;
+    font-size: 3em;
+    margin: auto;
+    max-width: 500px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-shadow: 2px 2px 0px black;
 }
 
+/*Todos p do header*/
 header>p {
     color: white;
+    font-family: var(--fonte-padrao);
+    font-size: 1.2em;
+    text-shadow: 2px 2px 0px rgb(28, 27, 27);
 }
 
 /*=== NAV ==========================================*/
 nav {
-    background-color: var(--cor5);
+    background-color: var(--cor6);
+    padding: 10px;
+    box-shadow: 0px 7px 9px rgb(81, 81, 81);
 }
 
-/*=== MAIN ==========================================*/
+nav > a {
+    color: white;
+    margin: 10px 0px;
+    padding: 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/*=== MAIN ===================
+==============================*/
+
+/*Config. gerais do main*/
 main {
+    /*limitam a largura do main*/
+    min-width: 300px;
+    max-width: 800px;
+
     background-color: white;
+    margin: auto;
+    text-align: justify;
+    box-shadow: 0px 0px 10px black; /*Sombra para ambos os lados*/
+    margin-bottom: 30px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
 /*Todos os h1 do main (desnecessário, só tem 1)*/
@@ -66,7 +106,18 @@ main h2 {
     font-family: var(--font-android);
 }
 
+/*=== FOTOS-MAIN =====
+======================*/
 
+main img {
+    width: 100%;
+}
+
+main img.pequena{
+    width: 70%;
+    display: block;
+    margin: auto;
+}
 /*=== FOOTER ==========================================*/
 footer {
     background-color: var(--cor6);
