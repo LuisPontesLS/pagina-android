@@ -5,7 +5,7 @@
     src: url('./fontes/idroid.otf') format('opentype');
     font-weight: normal;
 }
-
+/* > CONFIG GLOBAIS > =======================*/
 /*Cores selecionadas na forma de variáveis*/
 :root {
     --cor1: #c5ebd6;
@@ -24,6 +24,7 @@
     margin: 0px;
     padding: 0px;
 }
+/* < CONFIG GLOBAIS < =======================*/
 
 body {
     background-color: var(--cor1);
@@ -85,10 +86,9 @@ nav>a:hover {
     color: var(--cor5)
 }   
 
-/*=== MAIN ===================
-==============================*/
+/*=== MAIN =================================================*/
 
-/*Config. gerais do main*/
+/*GERAL, MAIN*/
 main {
     /*limitam a largura do main*/
     min-width: 300px;
@@ -96,6 +96,7 @@ main {
 
     background-color: white;
     margin: auto;
+    padding: 20px;
     text-align: justify;
     box-shadow: 0px 0px 10px black;
     /*Sombra para ambos os lados*/
@@ -110,9 +111,41 @@ main h1 {
     font-family: var(--font-android);
 }
 
-/*Todos os h2 do main*/
+/*= H2, MAIN - TODOS =*/
 main h2 {
     font-family: var(--font-android);
+    color: var(--cor4);
+    font-size: 1.3em;
+    background-image: linear-gradient(to right, var(--cor2), transparent);/*degradê de fundo*/
+    text-indent: 8px;/*Recuo do parágrafo*/
+}
+
+/*= P, MAIN - PARA TODOS =*/
+main p { /*não põe '>' para não afetar o 'p' do article, mas vai pegar 
+    o 'p' de todo o main - Capítulo 17 Aula 10 - 7:00*/
+    margin: 15px 0px 15px 0; /*descolando os 'p' de cima e baixo*/
+    text-align: justify;
+    text-indent: 30px; /*recuo dos parágrafos*/
+    line-height: 2em; /*espaço entre as linhas*/
+
+}
+
+main strong {
+    color: var(--cor4);
+    font-weight: bold;
+    }
+
+main a {
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--cor5);
+    background-color: var(--cor1);
+    padding: 2px 6px;  
+}
+
+main a:hover{
+    text-decoration: underline;
+    color: var(--cor4);
 }
 
 /*=== FOTOS-MAIN =====
@@ -122,8 +155,9 @@ main img {
     width: 100%;
 }
 
+/*IMG DO BUGDROID SEGURANDO A MÃO DE FIGURA HUMANA*/
 main img.pequena {
-    width: 70%;
+    max-width: 350px; /*imagem com pouca resolução vai desfocar em tela grande*/
     display: block;
     margin: auto;
 }
