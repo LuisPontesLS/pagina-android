@@ -5,6 +5,7 @@
     src: url('./fontes/idroid.otf') format('opentype');
     font-weight: normal;
 }
+
 /* > CONFIG GLOBAIS > =======================*/
 /*Cores selecionadas na forma de variáveis*/
 :root {
@@ -24,6 +25,7 @@
     margin: 0px;
     padding: 0px;
 }
+
 /* < CONFIG GLOBAIS < =======================*/
 
 body {
@@ -33,7 +35,8 @@ body {
 
 /*QUALQUER LINK EXTERNO TERÁ UMA "CORRENTINHA" AO LADO*/
 a.externo::after {
-    content: '\00A0\1F517'; /*Desenho da correntinha para link externo*/
+    content: '\00A0\1F517';
+    /*Desenho da correntinha para link externo*/
 }
 
 /*=== HEADER ==================
@@ -58,6 +61,7 @@ header>h1 {
     padding-left: 20px;
     padding-right: 20px;
     text-shadow: 2px 2px 0px black;
+    font-weight: normal;
 }
 
 /*Todos 'p' do header*/
@@ -89,7 +93,7 @@ nav>a {
 nav>a:hover {
     background-color: var(--cor2);
     color: var(--cor5)
-}   
+}
 
 /*=== MAIN =================================================*/
 
@@ -114,6 +118,8 @@ main {
 main h1 {
     color: var(--cor5);
     font-family: var(--font-android);
+    font-weight: normal;
+    font-size: 1.8em;
 }
 
 /*= H2, MAIN - TODOS =*/
@@ -121,34 +127,42 @@ main h2 {
     font-family: var(--font-android);
     color: var(--cor4);
     font-size: 1.3em;
-    background-image: linear-gradient(to right, var(--cor2), transparent);/*degradê de fundo*/
-    text-indent: 8px;/*Recuo do parágrafo*/
+    background-image: linear-gradient(to right, var(--cor2), transparent);
+    /*degradê de fundo*/
+    text-indent: 8px;
+    /*Recuo do parágrafo*/
+    margin-top: 30px;
+    font-weight: normal;
 }
 
 /*= P, MAIN - PARA TODOS =*/
-main p { /*não põe '>' para não afetar o 'p' do article, mas vai pegar 
+main p {
+    /*não põe '>' para não afetar o 'p' do article, mas vai pegar 
     o 'p' de todo o main - Capítulo 17 Aula 10 - 7:00*/
-    margin: 15px 0px 15px 0; /*descolando os 'p' de cima e baixo*/
+    margin: 15px 0px 15px 0;
+    /*descolando os 'p' de cima e baixo*/
     text-align: justify;
-    text-indent: 30px; /*recuo dos parágrafos*/
-    line-height: 2em; /*espaço entre as linhas*/
+    text-indent: 30px;
+    /*recuo dos parágrafos*/
+    line-height: 2em;
+    /*espaço entre as linhas*/
 
 }
 
 main strong {
     color: var(--cor4);
     font-weight: bold;
-    }
+}
 
 main a {
     text-decoration: none;
     font-weight: bold;
     color: var(--cor5);
     background-color: var(--cor1);
-    padding: 2px 6px;  
+    padding: 2px 6px;
 }
 
-main a:hover{
+main a:hover {
     text-decoration: underline;
     color: var(--cor4);
 }
@@ -162,7 +176,8 @@ main img {
 
 /*IMG DO BUGDROID SEGURANDO A MÃO DE FIGURA HUMANA*/
 main img.pequena {
-    max-width: 350px; /*imagem com pouca resolução vai desfocar em tela grande*/
+    max-width: 350px;
+    /*imagem com pouca resolução vai desfocar em tela grande*/
     display: block;
     margin: auto;
 }
@@ -175,18 +190,39 @@ aside {
     box-shadow: 3px 3px 8px black;
 }
 
-aside > h3 {
+aside>h3 {
     background-color: var(--cor4);
     color: white;
     padding: 10px;
-    margin: -10px -10px 0px -10px;/*Fez com que a faixa mais escura ocupasse toda a caixa mais clara*/
+    margin: -10px -10px 0px -10px;
+    /*Fez com que a faixa mais escura ocupasse toda a caixa mais clara*/
     border-radius: 10px 10px 0px 0px;
 }
 
-aside > ul {
-    list-style-type: '\2714\00A0\00A0'; /* mód 2 aula 17 8:00 - não compativel com todos os navegadores*/
-    list-style-position: inside; /*coloca as bolinhas para dentro*/
+aside>ul {
+    list-style-type: '\2714\00A0\00A0';
+    /* mód 2 aula 17 8:00 - não compativel com todos os navegadores*/
+    list-style-position: inside;
+    /*coloca as bolinhas para dentro*/
     columns: 2;
+}
+
+div.video {
+    background-color: var(--cor5);
+    margin: 0 -20px 30px -20px;
+    /*os negativos são para 'engolir' as margens e paddings do 'main'*/
+    padding: 20px;
+    /*A PARTIR DAQUI E NA DIV ABAIXO É MACETE PURO*/
+    padding-bottom: 57%; /*eliminar as barras pretas horizontais*/
+    position: relative;
+}
+
+div.video>iframe {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
 }
 
 /*=== FOOTER ==========================================*/
